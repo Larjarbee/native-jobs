@@ -15,6 +15,7 @@ import Company from '../../components/jobdetails/company/Company';
 import JobTabs from '../../components/jobdetails/tabs/Tabs';
 import Specifics from '../../components/jobdetails/specifics/Specifics';
 import JobAbout from '../../components/jobdetails/about/About';
+import JobFooter from '../../components/jobdetails/footer/Footer';
 
 const tabs = ['About', 'Qualifications', 'Responsibilities'];
 
@@ -115,6 +116,12 @@ const JobDetails = () => {
           </View>
         )}
       </ScrollView>
+
+      <JobFooter
+        url={
+          data[0]?.job_google_link ?? 'https://careers.google.com/jobs/results/'
+        }
+      />
     </SafeAreaView>
   );
 };

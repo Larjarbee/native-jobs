@@ -9,7 +9,7 @@ import {
 import { useRouter } from 'expo-router';
 
 import styles from './welcome.style';
-import { icons, SIZES } from '../../../constants';
+import { COLORS, icons, SIZES } from '../../../constants';
 import { useState } from 'react';
 
 const jobTypes = ['Full-time', 'Part-time', 'Contractor'];
@@ -32,6 +32,7 @@ export default function Welcome({ searchTerm, setSearchTerm, handleClick }) {
             value={searchTerm}
             onChangeText={(text) => setSearchTerm(text)}
             placeholder='What are you looking for?'
+            placeholderTextColor={COLORS.primary}
           />
         </View>
 
